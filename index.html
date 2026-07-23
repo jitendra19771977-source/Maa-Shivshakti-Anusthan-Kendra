@@ -12,7 +12,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -21,103 +21,117 @@
                         saffron: '#FF7700',
                         divineRed: '#8B0000',
                         gold: '#FFD700',
-                        deepGold: '#B8860B',
-                        spiritualDark: '#0f172a'
+                        deepGold: '#D4AF37',
+                        spiritualDark: '#1A0B2E'
                     },
                     fontFamily: {
-                        hindi: ['"Rozha One"', '"Tiro Devanagari Hindi"', 'serif'],
-                        body: ['Poppins', 'sans-serif']
+                        hindi: ['Yatra One', 'Rozha One', 'serif'],
+                        sans: ['Poppins', 'sans-serif']
                     }
                 }
             }
         }
     </script>
     <style>
-        .gold-gradient {
-            background: linear-gradient(135deg, #FFF5C0 0%, #FFD700 50%, #B8860B 100%);
+        .bg-divine-gradient {
+            background: linear-gradient(135deg, #1a0826 0%, #4a0e17 50%, #1a0826 100%);
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FFE259 0%, #FFA751 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .card-glow:hover {
-            box-shadow: 0 0 25px rgba(255, 119, 0, 0.3);
-        }
-        .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.95)), url('varanasi_ghat_aarti.jpg');
-            background-size: cover;
-            background-position: center;
+            box-shadow: 0 10px 25px -5px rgba(255, 119, 0, 0.4);
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-body antialiased selection:bg-saffron selection:text-white">
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-saffron selection:text-white">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-divineRed via-saffron to-divineRed text-white text-xs sm:text-sm py-2 px-4 text-center font-semibold shadow-md flex justify-center items-center gap-2">
-        <span>🚩 ॐ श्री काशी विश्वनाथाय नमः 🚩 काशी एवं उज्जैन के सिद्ध पीठों द्वारा अधिकृत वैदिक अनुष्ठान केंद्र</span>
+    <div class="bg-gradient-to-r from-saffron via-red-600 to-saffron text-white text-xs md:text-sm py-2 px-4 text-center font-semibold tracking-wide shadow-md">
+        🚩 🚩 🚩 **माँ शिवशक्ति अनुष्ठान केंद्र** — विद्वान वैदिक ब्राह्मणों द्वारा अनुष्ठान, रुद्राभिषेक एवं ज्योतिष समाधान 🚩 🚩 🚩
     </div>
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-amber-900/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-saffron/30 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-saffron to-divineRed flex items-center justify-center text-gold text-2xl font-extrabold border-2 border-gold shadow-lg">
+                <div class="w-11 h-11 rounded-full bg-saffron flex items-center justify-center text-2xl text-amber-100 shadow-md border-2 border-gold">
                     🕉️
                 </div>
                 <div>
-                    <h1 class="font-hindi text-xl sm:text-2xl font-bold text-gold-gradient tracking-wide">माँ शिवशक्ति अनुष्ठान केंद्र</h1>
-                    <p class="text-[10px] sm:text-xs text-amber-200/80 tracking-wider">ज्योतिष • कर्मकांड • महामृत्युंजय • कालसर्प शांति</p>
+                    <h1 class="font-hindi text-xl md:text-2xl font-bold text-saffron leading-tight">माँ शिवशक्ति</h1>
+                    <p class="text-xs text-amber-300 tracking-wider">अनुष्ठान केंद्र एवं ज्योतिष संस्थान</p>
                 </div>
             </div>
-            
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-saffron transition">मुख्य पृष्ठ</a>
+                <a href="#services" class="hover:text-saffron transition">पूजा एवं अनुष्ठान</a>
+                <a href="#booking" class="hover:text-saffron transition">संकल्प बुक करें</a>
+                <a href="#dakshina" class="hover:text-saffron transition">दक्षिणा / UPI</a>
+            </nav>
+
+            <!-- WhatsApp Direct Call Button -->
             <div class="flex items-center space-x-3">
-                <a href="https://wa.me/919651500884?text=जय%20माता%20दी!%20मुझे%20पूजा%20अनुष्ठान%20के%20विषय%20में%20जानकारी%20चाहिए।" target="_blank" class="hidden sm:flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold transition shadow-md">
-                    <i class="fa-brands fa-whatsapp text-base"></i> व्हाट्सएप बात करें
-                </a>
-                <a href="#booking" class="bg-gradient-to-r from-saffron to-amber-600 hover:from-amber-600 hover:to-saffron text-white px-4 py-2 rounded-full text-xs font-bold transition shadow-lg border border-amber-300/40">
-                    <i class="fa-solid fa-phone mr-1"></i> संपर्क करें
+                <a href="https://wa.me/919651500884?text=जय%20माता%20दी!%20मुझे%20पूजा/अनुष्ठान%20के%20विषय%20में%20जानकारी%20चाहिए।" 
+                   target="_blank" 
+                   class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-xs md:text-sm font-bold flex items-center shadow-lg transition transform hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-lg mr-2"></i> व्हाट्सएप सम्पर्क
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg py-16 lg:py-24 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden border-b border-amber-900/40">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <span class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs px-4 py-1.5 rounded-full font-semibold mb-4">
-                ★ 100% शास्त्रोक्त एवं प्रामाणिक वैदिक पूजा संकल्प ★
-            </span>
-            <h2 class="font-hindi text-3xl sm:text-5xl lg:text-6xl font-bold text-gold-gradient leading-tight mb-6">
-                जीवन के सभी कष्टों का वैदिक अनुष्ठान एवं ज्योतिष समाधान
-            </h2>
-            <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 font-light">
-                क्या आप गृह क्लेश, व्यापार हानि, विवाह में बाधा, स्वास्थ्य समस्या या ग्रह दोष से परेशान हैं? काशी एवं उज्जैन के प्रकांड विद्वानों द्वारा लाइव नाम-गोत्र संकल्प के साथ पूजन कराएं।
+    <section id="home" class="relative bg-divine-gradient py-16 md:py-24 overflow-hidden border-b border-amber-900/40">
+        <!-- Cosmic Galaxy Background Layer -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-screen" style="background-image: url('cosmic_shivshakti.jpg'), url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1920&q=80');"></div>
+        
+        <!-- Varanasi Ghat Background Layer -->
+        <div class="absolute inset-0 bg-cover bg-bottom opacity-20" style="background-image: url('varanasi_ghat_aarti.jpg'), url('https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1920&q=80');"></div>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/70 to-slate-950"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-saffron/20 border border-saffron/40 text-saffron text-sm font-semibold mb-6 shadow-lg backdrop-blur-sm">
+                ✨ 100% वैदिक विधि-विधान व लाइव संकल्प सुविधा ✨
+            </div>
+            
+            <h1 class="font-hindi text-3xl sm:text-5xl md:text-6xl font-extrabold text-gold-gradient mb-6 leading-tight drop-shadow-md">
+                माँ शिवशक्ति अनुष्ठान केंद्र
+            </h1>
+            
+            <p class="max-w-3xl mx-auto text-slate-200 text-base md:text-xl mb-8 leading-relaxed font-medium">
+                वैदिक ब्राह्मणों द्वारा घर बैठे अथवा प्रत्यक्ष उपस्थिति में शास्त्रोक्त विधि से <span class="text-saffron font-bold">रुद्राभिषेक, महामृत्युंजय जाप, मां बगलामुखी अनुष्ठान, कालसर्प शांति</span> एवं <span class="text-saffron font-bold">जन्मकुंडली विश्लेषण</span>।
             </p>
 
-            <div class="flex flex-wrap justify-center gap-4 text-xs font-semibold text-amber-200 mb-8">
-                <span class="bg-slate-900/80 px-3.5 py-2 rounded-lg border border-amber-900/50 flex items-center gap-1.5"><i class="fa-solid fa-video text-saffron"></i> लाइव वीडियो संकल्प</span>
-                <span class="bg-slate-900/80 px-3.5 py-2 rounded-lg border border-amber-900/50 flex items-center gap-1.5"><i class="fa-solid fa-truck-fast text-saffron"></i> प्रसाद घर तक डाक से</span>
-                <span class="bg-slate-900/80 px-3.5 py-2 rounded-lg border border-amber-900/50 flex items-center gap-1.5"><i class="fa-solid fa-gopuram text-saffron"></i> काशी के विद्वान आचार्य</span>
-            </div>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="#booking" class="w-full sm:w-auto bg-gradient-to-r from-saffron via-amber-500 to-saffron hover:opacity-95 text-slate-950 font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-2xl flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-fire text-slate-950"></i> अभी संकल्प/पूजा बुक करें
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                <a href="#booking" class="w-full sm:w-auto bg-saffron hover:bg-amber-600 text-white font-bold px-8 py-3.5 rounded-xl text-lg shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center">
+                    <i class="fa-solid fa-om mr-2"></i> संकल्प व पूजा बुक करें
                 </a>
-                <a href="https://wa.me/919651500884?text=जय%20माता%20दी!%20मुझे%20पूजा%20अनुष्ठान%20के%20विषय%20में%20जानकारी%20चाहिए।" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-xl flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> व्हाट्सएप पर बात करें
+                <a href="#services" class="w-full sm:w-auto bg-slate-800/90 hover:bg-slate-700 text-amber-300 font-semibold px-8 py-3.5 rounded-xl text-lg border border-amber-500/40 transition flex items-center justify-center">
+                    सभी सेवाएं देखें <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                 </a>
             </div>
 
-            <!-- Visual Showcase Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10">
-                <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-2xl group h-48 sm:h-56">
-                    <img src="varanasi_ghat_aarti.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80';" alt="Varanasi Ganga Aarti" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <!-- Hero Banner Images (Varanasi Ghat & Cosmic Shivshakti) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-10">
+                <div class="relative rounded-2xl overflow-hidden border-2 border-saffron/50 shadow-2xl group h-48 sm:h-56 bg-slate-900">
+                    <img src="varanasi_ghat_aarti.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80';" alt="Varanasi Ganga Ghat Aarti" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-4 text-left">
                         <span class="text-amber-400 font-hindi text-lg font-bold">🔱 वाराणसी गंगा घाट आरती</span>
                         <p class="text-xs text-slate-300">पवित्र काशी मोक्ष नगरी में दिव्य संकल्प एवं पूजन</p>
                     </div>
                 </div>
-                <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-2xl group h-48 sm:h-56">
-                    <img src="cosmic_shivshakti.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';" alt="Cosmic Shivshakti Energy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-2xl group h-48 sm:h-56 bg-slate-900">
+                    <img src="cosmic_shivshakti.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80';" alt="Cosmic Shivshakti Energy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-4 text-left">
                         <span class="text-gold font-hindi text-lg font-bold">🌌 ब्रह्माण्डीय शिवशक्ति ऊर्जा</span>
                         <p class="text-xs text-slate-300">महामृत्युंजय व बगलामुखी अनुष्ठान केंद्र</p>
@@ -161,10 +175,10 @@
             <div class="max-w-4xl mx-auto bg-gradient-to-r from-amber-950/90 via-slate-900/95 to-amber-950/90 border-2 border-saffron/60 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col md:flex-row items-center gap-6 text-left relative overflow-hidden backdrop-blur-md mb-12">
                 <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-saffron/10 rounded-full blur-2xl"></div>
                 
-                <!-- Acharya Photo / Avatar -->
+                <!-- Acharya Photo -->
                 <div class="relative shrink-0">
-                    <div class="w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden border-4 border-amber-400 shadow-2xl relative z-10 bg-slate-800 flex items-center justify-center">
-                        <img src="vivekananda_shastri.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%233B1004\'/><circle cx=\'50\' cy=\'38\' r=\'22\' fill=\'%23FF7700\'/><path d=\'M20 92 C 20 65, 80 65, 80 92 Z\' fill=\'%23FF7700\'/><text x=\'50\' y=\'44\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23FFF\'>🕉</text></svg>';" alt="ज्योतिर्विद विवेकानंद शास्त्री" class="w-full h-full object-cover object-top">
+                    <div class="w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden border-4 border-amber-400 shadow-2xl relative z-10 bg-slate-900">
+                        <img src="vivekananda_shastri.jpg" onerror="this.onerror=null;this.src='acharya_profile.jpg';" alt="ज्योतिर्विद विवेकानंद शास्त्री" class="w-full h-full object-cover object-top">
                     </div>
                     <div class="absolute -bottom-3 -right-3 bg-saffron text-white rounded-full px-3 py-1 text-xs font-bold shadow-lg z-20 border border-amber-200 flex items-center gap-1">
                         <span>🕉️</span> 25+ वर्ष अनुभव
@@ -202,6 +216,7 @@
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <!-- Branch 1: Varanasi -->
                     <div class="bg-slate-900/90 border border-amber-500/40 rounded-xl p-3.5 text-center shadow-lg hover:border-saffron transition group">
                         <div class="text-2xl mb-1 group-hover:scale-110 transition">🔱</div>
                         <h4 class="font-hindi text-sm font-bold text-amber-300">वाराणसी (काशी)</h4>
@@ -209,6 +224,7 @@
                         <span class="inline-block mt-2 text-[10px] bg-saffron/20 text-saffron px-2 py-0.5 rounded font-semibold">मुख्य पीठ</span>
                     </div>
 
+                    <!-- Branch 2: Ujjain -->
                     <div class="bg-slate-900/90 border border-amber-500/40 rounded-xl p-3.5 text-center shadow-lg hover:border-saffron transition group">
                         <div class="text-2xl mb-1 group-hover:scale-110 transition">🛕</div>
                         <h4 class="font-hindi text-sm font-bold text-amber-300">उज्जैन</h4>
@@ -216,6 +232,7 @@
                         <span class="inline-block mt-2 text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-semibold">शाखा पीठ</span>
                     </div>
 
+                    <!-- Branch 3: Omkareshwar -->
                     <div class="bg-slate-900/90 border border-amber-500/40 rounded-xl p-3.5 text-center shadow-lg hover:border-saffron transition group">
                         <div class="text-2xl mb-1 group-hover:scale-110 transition">☸️</div>
                         <h4 class="font-hindi text-sm font-bold text-amber-300">ओंकारेश्वर</h4>
@@ -223,6 +240,7 @@
                         <span class="inline-block mt-2 text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-semibold">शाखा पीठ</span>
                     </div>
 
+                    <!-- Branch 4: Tarapith (Kolkata) -->
                     <div class="bg-slate-900/90 border border-amber-500/40 rounded-xl p-3.5 text-center shadow-lg hover:border-saffron transition group">
                         <div class="text-2xl mb-1 group-hover:scale-110 transition">🌺</div>
                         <h4 class="font-hindi text-sm font-bold text-amber-300">तारापीठ (कोलकाता)</h4>
@@ -234,7 +252,7 @@
         </div>
     </section>
 
-    <!-- Services Section with Prices -->
+    <!-- Services Section -->
     <section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="font-hindi text-3xl md:text-4xl font-bold text-saffron mb-3">मुख्य पूजा एवं अनुष्ठान सेवाएं</h2>
@@ -249,9 +267,12 @@
                     <h3 class="font-hindi text-xl font-bold text-amber-300 mb-2">रुद्राभिषेक एवं पार्थिव शिवलिंग पूजन</h3>
                     <p class="text-xs text-slate-400 mb-4">भगवान शिव का दूध, दही, शहद, घी, गंगाजल व पंचामृत से अभिषेक। सुख, समृद्धि व कष्ट निवारण हेतु सर्वोत्तम।</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs font-extrabold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/30">दक्षिणा: ₹2,100 से प्रारम्भ</span>
-                    <button onclick="selectService('रुद्राभिषेक एवं पार्थिव पूजन')" class="bg-saffron/20 text-saffron hover:bg-saffron hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">बुक करें</button>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center gap-2">
+                    <div class="bg-amber-950/90 border border-amber-500/50 px-3 py-1.5 rounded-xl">
+                        <span class="text-[11px] text-amber-400 font-semibold">दक्षिणा: </span>
+                        <span class="text-xs text-amber-200 font-extrabold">₹2,100 से प्रारम्भ</span>
+                    </div>
+                    <button onclick="selectService('रुद्राभिषेक एवं पार्थिव पूजन')" class="bg-saffron text-white hover:bg-amber-600 px-3.5 py-1.5 rounded-lg text-xs font-bold transition shadow">बुक करें</button>
                 </div>
             </div>
 
@@ -262,9 +283,12 @@
                     <h3 class="font-hindi text-xl font-bold text-amber-300 mb-2">महामृत्युंजय अनुष्ठान व जाप</h3>
                     <p class="text-xs text-slate-400 mb-4">अकाल मृत्यु भय, असाध्य रोग निवारण व स्वास्थ्य लाभ हेतु 1.25 लाख महामृत्युंजय महामंत्र जाप व हवन।</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs font-extrabold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/30">दक्षिणा: ₹11,000 से प्रारम्भ</span>
-                    <button onclick="selectService('महामृत्युंजय अनुष्ठान')" class="bg-saffron/20 text-saffron hover:bg-saffron hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">बुक करें</button>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center gap-2">
+                    <div class="bg-amber-950/90 border border-amber-500/50 px-3 py-1.5 rounded-xl">
+                        <span class="text-[11px] text-amber-400 font-semibold">दक्षिणा: </span>
+                        <span class="text-xs text-amber-200 font-extrabold">₹11,000 / संकल्प अनुसार</span>
+                    </div>
+                    <button onclick="selectService('महामृत्युंजय अनुष्ठान')" class="bg-saffron text-white hover:bg-amber-600 px-3.5 py-1.5 rounded-lg text-xs font-bold transition shadow">बुक करें</button>
                 </div>
             </div>
 
@@ -275,9 +299,12 @@
                     <h3 class="font-hindi text-xl font-bold text-amber-300 mb-2">मां बगलामुखी अनुष्ठान</h3>
                     <p class="text-xs text-slate-400 mb-4">शत्रु बाधा, कोर्ट कचहरी विजय, व्यवसाय में उन्नति एवं तंत्र बाधा निवारण हेतु शक्ति साधना।</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs font-extrabold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/30">दक्षिणा: ₹7,500 से प्रारम्भ</span>
-                    <button onclick="selectService('मां बगलामुखी अनुष्ठान')" class="bg-saffron/20 text-saffron hover:bg-saffron hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">बुक करें</button>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center gap-2">
+                    <div class="bg-amber-950/90 border border-amber-500/50 px-3 py-1.5 rounded-xl">
+                        <span class="text-[11px] text-amber-400 font-semibold">दक्षिणा: </span>
+                        <span class="text-xs text-amber-200 font-extrabold">₹7,100 / संकल्प अनुसार</span>
+                    </div>
+                    <button onclick="selectService('मां बगलामुखी अनुष्ठान')" class="bg-saffron text-white hover:bg-amber-600 px-3.5 py-1.5 rounded-lg text-xs font-bold transition shadow">बुक करें</button>
                 </div>
             </div>
 
@@ -288,9 +315,12 @@
                     <h3 class="font-hindi text-xl font-bold text-amber-300 mb-2">कालसर्प व नवग्रह शांति पूजा</h3>
                     <p class="text-xs text-slate-400 mb-4">कुंडली में स्थित कालसर्प दोष, राहु-केतु दोष व नवग्रहों के दुष्प्रभाव को दूर करने हेतु विशेष पूजन।</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs font-extrabold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/30">दक्षिणा: ₹3,100 से प्रारम्भ</span>
-                    <button onclick="selectService('कालसर्प व नवग्रह शांति')" class="bg-saffron/20 text-saffron hover:bg-saffron hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">बुक करें</button>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center gap-2">
+                    <div class="bg-amber-950/90 border border-amber-500/50 px-3 py-1.5 rounded-xl">
+                        <span class="text-[11px] text-amber-400 font-semibold">दक्षिणा: </span>
+                        <span class="text-xs text-amber-200 font-extrabold">₹3,100 से प्रारम्भ</span>
+                    </div>
+                    <button onclick="selectService('कालसर्प व नवग्रह शांति')" class="bg-saffron text-white hover:bg-amber-600 px-3.5 py-1.5 rounded-lg text-xs font-bold transition shadow">बुक करें</button>
                 </div>
             </div>
 
@@ -301,9 +331,12 @@
                     <h3 class="font-hindi text-xl font-bold text-amber-300 mb-2">जन्मकुंडली एवं ज्योतिष परामर्श</h3>
                     <p class="text-xs text-slate-400 mb-4">विवाह योग्य वर-वधू गुण मिलाप, करियर, व्यापार, स्वास्थ्य व गृह क्लेश समाधान हेतु कुंडली विश्लेषण।</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs font-extrabold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/30">दक्षिणा: ₹501 (परामर्श)</span>
-                    <button onclick="selectService('जन्मकुंडली विश्लेषण')" class="bg-saffron/20 text-saffron hover:bg-saffron hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">बुक करें</button>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center gap-2">
+                    <div class="bg-amber-950/90 border border-amber-500/50 px-3 py-1.5 rounded-xl">
+                        <span class="text-[11px] text-amber-400 font-semibold">दक्षिणा: </span>
+                        <span class="text-xs text-amber-200 font-extrabold">₹501 (परामर्श)</span>
+                    </div>
+                    <button onclick="selectService('जन्मकुंडली विश्लेषण')" class="bg-saffron text-white hover:bg-amber-600 px-3.5 py-1.5 rounded-lg text-xs font-bold transition shadow">बुक करें</button>
                 </div>
             </div>
 
@@ -314,9 +347,12 @@
                     <h3 class="font-hindi text-xl font-bold text-amber-300 mb-2">गृह प्रवेश व वास्तुकल्प पूजा</h3>
                     <p class="text-xs text-slate-400 mb-4">नए भवन में सकारात्मक ऊर्जा प्रवाह, नवग्रह शांति व गृह प्रवेश हेतु वैदिक हवन-पूजन।</p>
                 </div>
-                <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs font-extrabold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/30">दक्षिणा: ₹5,100 से प्रारम्भ</span>
-                    <button onclick="selectService('गृह प्रवेश व वास्तु पूजा')" class="bg-saffron/20 text-saffron hover:bg-saffron hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">बुक करें</button>
+                <div class="pt-4 border-t border-slate-800 flex justify-between items-center gap-2">
+                    <div class="bg-amber-950/90 border border-amber-500/50 px-3 py-1.5 rounded-xl">
+                        <span class="text-[11px] text-amber-400 font-semibold">दक्षिणा: </span>
+                        <span class="text-xs text-amber-200 font-extrabold">₹5,100 से प्रारम्भ</span>
+                    </div>
+                    <button onclick="selectService('गृह प्रवेश व वास्तु पूजा')" class="bg-saffron text-white hover:bg-amber-600 px-3.5 py-1.5 rounded-lg text-xs font-bold transition shadow">बुक करें</button>
                 </div>
             </div>
         </div>
@@ -329,89 +365,109 @@
                 <div class="text-center mb-8">
                     <span class="text-saffron text-xs font-bold uppercase tracking-widest">ऑनलाइन संकल्प बुकिंग</span>
                     <h2 class="font-hindi text-3xl font-bold text-gold-gradient mt-1">पूजा / अनुष्ठान संकल्प प्रपत्र</h2>
-                    <p class="text-xs text-slate-400 mt-2">नीचे दी गई जानकारी भरें, आपका नाम व गोत्र बोलकर पंडित जी द्वारा संकल्प लिया जाएगा।</p>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-2">विवरण भरें, सीधे व्हाट्सएप पर आपकी बुकिंग रसीद व संकल्प प्राप्त होगा</p>
                 </div>
 
-                <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <form id="sankalpaForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-amber-200 mb-1">यजमान का नाम *</label>
-                            <input type="text" id="yajmanName" required placeholder="अपना पूरा नाम लिखें" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-saffron">
+                            <input type="text" id="yajmanName" required placeholder="अपना पूरा नाम लिखें" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-white">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-amber-200 mb-1">मोबाइल / व्हाट्सएप नंबर *</label>
-                            <input type="tel" id="yajmanPhone" required placeholder="10 अंकों का नंबर" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-saffron">
+                            <input type="tel" id="yajmanPhone" required placeholder="10 अंकों का व्हाट्सएप नंबर" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-white">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-amber-200 mb-1">पूजा/अनुष्ठान का प्रकार *</label>
-                            <select id="pujaType" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-amber-300 focus:outline-none focus:border-saffron">
-                                <option value="महामृत्युंजय जाप एवं अनुष्ठान">महामृत्युंजय जाप एवं अनुष्ठान (₹11,000)</option>
-                                <option value="रुद्राभिषेक एवं पार्थिव पूजन">रुद्राभिषेक एवं पार्थिव पूजन (₹2,100)</option>
-                                <option value="कालसर्प व नवग्रह शांति पूजा">कालसर्प व नवग्रह शांति पूजा (₹3,100)</option>
-                                <option value="मां बगलामुखी अनुष्ठान">मां बगलामुखी अनुष्ठान (₹7,500)</option>
-                                <option value="जन्मकुंडली एवं ज्योतिष परामर्श">जन्मकुंडली एवं ज्योतिष परामर्श (₹501)</option>
-                                <option value="गृह प्रवेश व वास्तुकल्प पूजा">गृह प्रवेश व वास्तुकल्प पूजा (₹5,100)</option>
+                            <label class="block text-xs font-semibold text-amber-200 mb-1">पूजा का प्रकार *</label>
+                            <select id="pujaType" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-amber-200">
+                                <option value="रुद्राभिषेक एवं पार्थिव पूजन">रुद्राभिषेक एवं पार्थिव पूजन</option>
+                                <option value="महामृत्युंजय अनुष्ठान">महामृत्युंजय अनुष्ठान</option>
+                                <option value="मां बगलामुखी अनुष्ठान">मां बगलामुखी अनुष्ठान</option>
+                                <option value="कालसर्प व नवग्रह शांति">कालसर्प व नवग्रह शांति</option>
+                                <option value="जन्मकुंडली विश्लेषण">जन्मकुंडली विश्लेषण</option>
+                                <option value="गृह प्रवेश व वास्तु पूजा">गृह प्रवेश व वास्तु पूजा</option>
+                                <option value="अन्य विशेष अनुष्ठान">अन्य विशेष अनुष्ठान</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-amber-200 mb-1">गोत्र (यदि ज्ञात न हो तो कश्यप छोड़ें)</label>
-                            <input type="text" id="gotraName" placeholder="उदा. भारद्वाज, कश्यप" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-saffron">
+                            <label class="block text-xs font-semibold text-amber-200 mb-1">गोत्र का नाम</label>
+                            <input type="text" id="gotraName" placeholder="अपना गोत्र (यदि ज्ञात हो)" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-white">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-amber-200 mb-1">इच्छित पूजा तिथि</label>
-                            <input type="date" id="pujaDate" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-saffron">
+                            <input type="date" id="pujaDate" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-white">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-amber-200 mb-1">जन्म तिथि (कुंडली हेतु)</label>
-                            <input type="text" id="dob" placeholder="उदा. 15/08/1990" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-saffron">
+                            <label class="block text-xs font-semibold text-amber-200 mb-1">जन्म तिथि (ज्योतिष हेतु)</label>
+                            <input type="date" id="dob" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-white">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-amber-200 mb-1">जन्म समय व स्थान</label>
-                            <input type="text" id="birthDetails" placeholder="उदा. सुबह 08:30, लखनऊ" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-saffron">
+                            <label class="block text-xs font-semibold text-amber-200 mb-1">जन्म स्थान व समय</label>
+                            <input type="text" id="birthDetails" placeholder="उदा: दिल्ली, सुबह 08:30" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-white">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-amber-200 mb-1">विशेष प्रार्थना / मनोकामना सन्देश</label>
-                        <textarea id="notes" rows="2" placeholder="अपनी समस्या या विशेष मनोकामना यहाँ लिखें..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-saffron"></textarea>
+                        <label class="block text-xs font-semibold text-amber-200 mb-1">विशेष मनोकामना या सन्देश</label>
+                        <textarea id="notes" rows="3" placeholder="अपनी समस्या या विशेष मनोकामना यहाँ लिखें..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:border-saffron focus:outline-none text-white"></textarea>
                     </div>
 
-                    <div class="pt-2">
-                        <button type="submit" class="w-full bg-gradient-to-r from-saffron via-amber-500 to-saffron hover:opacity-95 text-slate-950 font-bold py-4 rounded-xl text-sm transition shadow-2xl flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-lg"></i> व्हाट्सएप पर संकल्प एवं बुकिंग भेजें
+                    <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl text-base flex items-center justify-center shadow-lg transition">
+                            <i class="fa-brands fa-whatsapp text-xl mr-2"></i> व्हाट्सएप द्वारा संकल्प भेजे
                         </button>
+                        <a href="#dakshina" class="bg-saffron hover:bg-amber-600 text-white font-bold py-3.5 px-6 rounded-xl text-base flex items-center justify-center shadow-lg transition">
+                            <i class="fa-solid fa-qrcode mr-2"></i> ऑनलाइन दक्षिणा जमा करें
+                        </a>
                     </div>
                 </form>
+            </div>
+        </div>
+    </section>
 
-                <!-- Payment QR & UPI Info -->
-                <div class="mt-10 pt-8 border-t border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                    <div class="bg-slate-900/80 p-5 rounded-2xl border border-amber-900/40 text-center sm:text-left flex flex-col sm:flex-row items-center gap-4">
-                        <div class="w-24 h-24 bg-white p-2 rounded-xl shrink-0 flex items-center justify-center border-2 border-saffron">
-                            <div class="text-center text-slate-900 font-bold text-xs">
-                                <span class="text-saffron font-extrabold text-sm block">UPI Scan</span>
-                                9651500884@ybl
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-sm font-bold text-amber-200">गूगल पे / फोन पे / पेटीएम दक्षिणा</h4>
-                            <p class="text-xs text-slate-400 mt-1">अधिकृत यू०पी०आई० आईडी पर दक्षिणा राशि प्रेषित कर रसीद व्हाट्सएप पर भेजें।</p>
-                            <span class="text-xs text-slate-400 block mt-1 font-mono text-amber-300" id="upiId">9651500884@ybl</span>
-                            <button onclick="copyUpi()" class="mt-2 text-[10px] bg-saffron/20 hover:bg-saffron text-saffron hover:text-white px-2.5 py-1 rounded transition border border-saffron/40 font-bold">
-                                <i class="fa-solid fa-copy mr-1"></i> UPI ID कॉपी करें
-                            </button>
+    <!-- Online Dakshina & UPI QR Code Section -->
+    <section id="dakshina" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-amber-500/30 rounded-3xl p-8 shadow-2xl">
+            <span class="bg-saffron/20 text-saffron px-4 py-1 rounded-full text-xs font-bold">दक्षिणा एवं सहयोग</span>
+            <h2 class="font-hindi text-3xl font-bold text-amber-300 mt-2 mb-4">ऑनलाइन दक्षिणा एवं भुगतान (UPI / QR)</h2>
+            <p class="text-slate-300 text-sm max-w-xl mx-auto mb-8">
+                पूजन एवं अनुष्ठान हेतु दक्षिणा आप Google Pay, PhonePe, Paytm या अन्य UPI ऐप्स द्वारा सीधे भेज सकते हैं।
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 bg-slate-900/90 p-6 rounded-2xl border border-slate-800">
+                <!-- QR Code Box -->
+                <div class="bg-white p-4 rounded-2xl shadow-inner text-slate-900 text-center">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=9651500884@ybl%26pn=Maa%20Shivshakti%20Anusthan" alt="UPI QR Code" class="mx-auto rounded-lg mb-2">
+                    <span class="text-xs font-bold text-slate-700">Scan to Pay via Any UPI App</span>
+                </div>
+
+                <!-- UPI Details & Buttons -->
+                <div class="text-left space-y-4">
+                    <div class="bg-slate-950 p-4 rounded-xl border border-amber-900/40">
+                        <span class="text-xs text-slate-400 block">आधिकारिक UPI ID:</span>
+                        <div class="flex items-center space-x-2 mt-1">
+                            <span id="upiId" class="text-lg font-mono font-bold text-amber-300">9651500884@ybl</span>
+                            <button onclick="copyUpi()" class="bg-saffron/20 hover:bg-saffron text-saffron hover:text-white text-xs px-2.5 py-1 rounded transition">कॉपी करें</button>
                         </div>
                     </div>
 
-                    <div class="text-xs text-slate-400 space-y-2 bg-slate-900/40 p-4 rounded-2xl border border-slate-800">
-                        <p class="text-amber-300 font-semibold flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> दक्षिणा रसीद व संकल्प समय व्हाट्सएप पर प्राप्त होगा।</p>
-                        <p class="text-amber-300 font-semibold flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> पूजा समाप्त होने पर विशेष प्रसाद डाक द्वारा आपके पते पर भेजा जाएगा।</p>
+                    <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                        <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700"><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Google Pay</span>
+                        <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700"><i class="fa-solid fa-check text-emerald-400 mr-1"></i> PhonePe</span>
+                        <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700"><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Paytm</span>
+                        <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700"><i class="fa-solid fa-check text-emerald-400 mr-1"></i> BHIM UPI</span>
                     </div>
+
+                    <p class="text-xs text-amber-200/80">
+                        * भुगतान के पश्चात रसीद का स्क्रीनशॉट व्हाट्सएप पर अवश्य भेजें ताकि आपकी पूजा रसीद जारी की जा सके।
+                    </p>
                 </div>
             </div>
         </div>
@@ -422,20 +478,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <h3 class="font-hindi text-xl font-bold text-saffron mb-3">माँ शिवशक्ति अनुष्ठान केंद्र</h3>
-                <p class="text-xs leading-relaxed">समस्त प्रकार के वैदिक पूजन, अनुष्ठान, महामृत्युंजय एवं ज्योतिषीय समस्याओं का शास्त्रोक्त समाधान।</p>
+                <p class="text-xs leading-relaxed">
+                    समस्त प्रकार के वैदिक पूजन, अनुष्ठान, रुद्राभिषेक एवं ज्योतिषीय समस्याओं का शास्त्रोक्त समाधान।
+                </p>
             </div>
             <div>
                 <h4 class="font-bold text-amber-300 mb-3 text-sm">सम्पर्क जानकारी</h4>
                 <p class="text-xs mb-1">📍 स्थान: हरतीरथ, वाराणसी (मुख्य केंद्र)</p>
-                <p class="text-xs mb-1">📞 फोन: +91 9651500884</p>
+                <p class="text-xs mb-1">📞 फ़ोन: +91 9651500884</p>
                 <p class="text-xs mb-1">💬 व्हाट्सएप: +91 9651500884</p>
             </div>
             <div>
                 <h4 class="font-bold text-amber-300 mb-3 text-sm">पवित्र मन्त्र</h4>
-                <p class="text-xs italic text-amber-200">"सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः"</p>
+                <p class="text-xs italic text-amber-200">
+                    "सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके।<br>
+                    शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते॥"
+                </p>
             </div>
         </div>
-        <div class="text-center mt-8 pt-4 border-t border-slate-900 text-[10px] text-slate-500">
+        <div class="mt-8 text-center text-xs border-t border-slate-900 pt-6 text-slate-500">
             © 2026 माँ शिवशक्ति अनुष्ठान केंद्र. सर्वाधिकार सुरक्षित।
         </div>
     </footer>
@@ -465,15 +526,15 @@
             var notes = document.getElementById('notes').value || "-";
 
             var msg = "🚩 *माँ शिवशक्ति अनुष्ठान केंद्र - नया संकल्प बुकिंग* 🚩%0A%0A" +
-                "*यजमान का नाम:* " + encodeURIComponent(name) + "%0A" +
-                "*फ़ोन नंबर:* " + encodeURIComponent(phone) + "%0A" +
-                "*पूजा/अनुष्ठान:* " + encodeURIComponent(type) + "%0A" +
-                "*गोत्र:* " + encodeURIComponent(gotra) + "%0A" +
-                "*इच्छित तिथि:* " + encodeURIComponent(date) + "%0A" +
-                "*जन्म तिथि:* " + encodeURIComponent(dob) + "%0A" +
-                "*जन्म स्थान/समय:* " + encodeURIComponent(birthDetails) + "%0A" +
-                "*विशेष सन्देश:* " + encodeURIComponent(notes) + "%0A%0A" +
-                "कृपया मुझे संकल्प रसीद व पूजा समय सूचित करें। जय माता दी! 🙏";
+                      "*यजमान का नाम:* " + encodeURIComponent(name) + "%0A" +
+                      "*फ़ोन नंबर:* " + encodeURIComponent(phone) + "%0A" +
+                      "*पूजा/अनुष्ठान:* " + encodeURIComponent(type) + "%0A" +
+                      "*गोत्र:* " + encodeURIComponent(gotra) + "%0A" +
+                      "*इच्छित तिथि:* " + encodeURIComponent(date) + "%0A" +
+                      "*जन्म तिथि:* " + encodeURIComponent(dob) + "%0A" +
+                      "*जन्म स्थान/समय:* " + encodeURIComponent(birthDetails) + "%0A" +
+                      "*विशेष सन्देश:* " + encodeURIComponent(notes) + "%0A%0A" +
+                      "कृपया मुझे संकल्प रसीद व पूजा समय सूचित करें। जय माता दी! 🙏";
 
             var whatsappUrl = "https://wa.me/919651500884?text=" + msg;
             window.open(whatsappUrl, '_blank');
