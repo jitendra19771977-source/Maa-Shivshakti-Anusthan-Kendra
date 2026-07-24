@@ -4,161 +4,300 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>माँ शिवशक्ति अनुष्ठान केंद्र | Maa Shivshakti Anusthan Kendra</title>
-    <!-- Favicon and App Icon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://w3.org' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FF7700'/><circle cx='50' cy='50' r='42' fill='%238B0000' stroke='%23FFD700' stroke-width='3'/><text x='50' y='62' font-size='48' text-anchor='middle' fill='%23FFD700'>🕉</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://w3.org' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FF7700'/><circle cx='50' cy='50' r='42' fill='%238B0000' stroke='%23FFD700' stroke-width='3'/><text x='50' y='62' font-size='48' text-anchor='middle' fill='%23FFD700'>🕉</text></svg>">
-    <!-- Tailwind CSS -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    <!-- Google Fonts -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        saffron: '#FF7700',
-                        divineRed: '#8B0000',
-                        gold: '#FFD700',
-                        deepGold: '#D4AF37',
-                        spiritualDark: '#1A0B2E'
-                    },
-                    fontFamily: {
-                        hindi: ['Yatra One', 'Rozha One', 'serif'],
-                        sans: ['Poppins', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        .bg-divine-gradient {
+        /* संपूर्ण वेबसाइट के लिए बेसिक और सुंदर स्टाइल */
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .announcement {
+            background: linear-gradient(to right, #FF7700, #dc2626, #FF7700);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        header {
+            background-color: #0f172a;
+            border-b: 2px solid #FF7700;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            background-color: #FF7700;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .logo-text h1 {
+            color: #FF7700;
+            margin: 0;
+            font-size: 20px;
+        }
+        .logo-text p {
+            color: #fcd34d;
+            margin: 0;
+            font-size: 12px;
+        }
+        .nav-links a {
+            color: #f8fafc;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 15px;
+        }
+        .nav-links a:hover {
+            color: #FF7700;
+        }
+        .whatsapp-btn {
+            background-color: #16a34a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero {
             background: linear-gradient(135deg, #1a0826 0%, #4a0e17 50%, #1a0826 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
         }
-        .bg-gold-gradient {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        .hero h2 {
+            color: #FFD700;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
-        .text-gold-gradient {
-            background: linear-gradient(135deg, #FFE259 0%, #FFA751 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero p {
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            font-size: 18px;
+            line-height: 1.6;
         }
-        .card-glow:hover {
-            box-shadow: 0 10px 25px -5px rgba(255, 119, 0, 0.4);
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .primary-btn {
+            background-color: #FF7700;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .secondary-btn {
+            background-color: #1e293b;
+            color: #fcd34d;
+            border: 1px solid #FFD700;
+            padding: 12px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .section-title {
+            text-align: center;
+            color: #FF7700;
+            font-size: 28px;
+            margin: 40px 0 20px 0;
+        }
+        .profile-card {
+            background-color: #0f172a;
+            border: 1px solid #FF7700;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        .profile-img {
+            width: 150px;
+            height: 180px;
+            border-radius: 15px;
+            background-color: #334155;
+            object-cover: cover;
+            border: 2px solid #FFD700;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: #0f172a;
+            border: 1px solid rgba(255, 119, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+        }
+        .card h3 {
+            color: #fcd34d;
+            margin-top: 10px;
+        }
+        .card a {
+            color: #FF7700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .form-box {
+            background-color: #020617;
+            border: 2px solid #FF7700;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background: linear-gradient(to right, #FF7700, #ea580c);
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .upi-box {
+            background-color: #0f172a;
+            border: 1px solid #FF7700;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .qr-img {
+            max-width: 180px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #020617;
+            border-top: 1px solid rgba(255, 119, 0, 0.3);
+            padding: 30px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .profile-card { flex-direction: column; text-align: center; }
+            .btn-group { flex-direction: column; }
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans selection:bg-saffron selection:text-white">
+<body>
 
-<!-- Top Announcement Bar -->
-<div class="bg-gradient-to-r from-saffron via-red-600 to-saffron text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-md">
+<div class="announcement">
     🚩 🚩 🚩 माँ शिवशक्ति अनुष्ठान केंद्र — विद्वान वैदिक ब्राह्मणों द्वारा अनुष्ठान, रुद्राभिषेक एवं ज्योतिष समाधान 🚩 🚩 🚩
 </div>
 
-<!-- Header Navigation -->
-<header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-saffron/30 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center space-x-3">
-            <div class="w-11 h-11 rounded-full bg-saffron flex items-center justify-center text-2xl text-amber-100 shadow-md">
-                🕉
-            </div>
-            <div>
-                <h1 class="font-hindi text-xl md:text-2xl font-bold text-saffron leading-tight">माँ शिवशक्ति</h1>
-                <p class="text-xs text-amber-300 tracking-wider">अनुष्ठान केंद्र एवं ज्योतिष संस्थान</p>
-            </div>
+<header>
+    <div class="logo-box">
+        <div class="logo-icon">🕉</div>
+        <div class="logo-text">
+            <h1>माँ शिवशक्ति</h1>
+            <p>अनुष्ठान केंद्र एवं ज्योतिष संस्थान</p>
         </div>
-
-        <!-- Desktop Nav Links -->
-        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-            <a href="#home" class="hover:text-saffron transition">मुख्य पृष्ठ</a>
-            <a href="#services" class="hover:text-saffron transition">पूजा एवं अनुष्ठान</a>
-            <a href="#booking" class="hover:text-saffron transition">संकल्प बुक करें</a>
-            <a href="#gallery" class="hover:text-saffron transition">दर्शन गैलरी</a>
-            <a href="#dakshina" class="hover:text-saffron transition">दक्षिणा / UPI</a>
-        </nav>
-
-        <!-- Quick WhatsApp Action -->
-        <a href="https://wa.meाता%20दी!%20मुझे%20पूजा/अनुष्ठान%20के%20विषय%20में%20जानकारी%20चाहिए।" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-semibold px-4 py-2 rounded-xl text-sm flex items-center space-x-2 shadow-lg transition transform hover:scale-105">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-            <span>संपर्क करें</span>
-        </a>
     </div>
+    <nav class="nav-links">
+        <a href="#home">मुख्य पृष्ठ</a>
+        <a href="#services">पूजा एवं अनुष्ठान</a>
+        <a href="#booking">संकल्प बुक करें</a>
+        <a href="#dakshina">दक्षिणा / UPI</a>
+    </nav>
+    <a href="https://wa.meाता%20दी!" target="_blank" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i> संपर्क करें
+    </a>
 </header>
 
-<!-- Hero Section -->
-<section id="home" class="relative py-16 md:py-24 bg-divine-gradient overflow-hidden border-b border-amber-500/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-            <div>
-                <span class="inline-block bg-saffron/20 border border-saffron/50 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                    ✨ काशी (वाराणसी) एवं उज्जैन की पवित्र परंपरा
-                </span>
-                <h2 class="font-hindi text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-gold">
-                    समस्त वैदिक पूजा, महामृत्युंजय जाप एवं गृह शांति अनुष्ठान
-                </h2>
-                <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
-                    जीवन में आ रही बाधाओं, कालसर्प दोष, मांगलिक दोष, व्यापार हानि या स्वास्थ्य समस्याओं के निवारण हेतु शास्त्रोक्त विधि-विधान से विशेष अनुष्ठान कराएं।
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#booking" class="w-full sm:w-auto bg-saffron hover:bg-amber-600 text-white font-bold px-8 py-3.5 rounded-xl text-lg shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
-                        <span>पूजा संकल्प बुक करें</span>
-                        <i class="fa-solid fa-arrow-right text-sm"></i>
-                    </a>
-                    <a href="#services" class="w-full sm:w-auto bg-slate-800/90 hover:bg-slate-700 text-amber-300 font-semibold px-8 py-3.5 rounded-xl text-lg border border-amber-500/40 transition flex items-center justify-center">
-                        <span>अनुष्ठान सूची देखें</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Banner Cards (Unsplash High-Quality HD Images) -->
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-slate-900/80 p-3 rounded-2xl border border-amber-500/30 shadow-2xl relative overflow-hidden group">
-                    <div class="h-44 sm:h-52 rounded-xl overflow-hidden mb-2">
-                        <img src="https://unsplash.com" alt="Varanasi Ganga Ghat Aarti" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <p class="text-xs text-center font-semibold text-amber-300">काशी विश्वनाथ एवं गंगा आरती</p>
-                </div>
-
-                <div class="bg-slate-900/80 p-3 rounded-2xl border border-amber-500/30 shadow-2xl relative overflow-hidden group">
-                    <div class="h-44 sm:h-52 rounded-xl overflow-hidden mb-2">
-                        <img src="https://unsplash.com" alt="Cosmic Shivshakti Energy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <p class="text-xs text-center font-semibold text-amber-300">दिव्य अनुष्ठान एवं महामंत्र जाप</p>
-                </div>
-            </div>
-
-        </div>
+<section class="hero" id="home">
+    <h2>समस्त वैदिक पूजा, महामृत्युंजय जाप एवं गृह शांति अनुष्ठान</h2>
+    <p>जीवन में आ रही बाधाओं, कालसर्प दोष, मांगलिक दोष, व्यापार हानि या स्वास्थ्य समस्याओं के निवारण हेतु शास्त्रोक्त विधि-विधान से विशेष अनुष्ठान कराएं।</p>
+    <div class="btn-group">
+        <a href="#booking" class="primary-btn">पूजा संकल्प बुक करें</a>
+        <a href="#services" class="secondary-btn">अनुष्ठान सूची देखें</a>
     </div>
 </section>
 
-<!-- Acharya Profile Section -->
-<section class="py-12 bg-slate-900 border-b border-amber-500/20">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="bg-slate-950/80 p-6 sm:p-8 rounded-3xl border border-saffron/40 shadow-2xl flex flex-col md:flex-row items-center gap-8">
-            <div class="w-40 h-52 sm:w-48 sm:h-60 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-xl flex-shrink-0 bg-slate-800">
-                <img src="https://unsplash.com" alt="ज्योतिर्विद विवेकानंद शास्त्री" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-                <span class="text-saffron font-semibold text-xs tracking-widest uppercase">मुख्य आचार्य एवं संस्थापक</span>
-                <h3 class="font-hindi text-2xl font-bold text-amber-300 mt-1">ज्योतिर्विद विवेकानंद शास्त्री</h3>
-                <p class="text-xs text-amber-200/80 mb-3">काशी एवं उज्जैन परंपरा के विद्वान कर्मकांडी ब्राह्मण</p>
-                <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                    "हमारा उद्देश्य सनातन वैदिक संस्कृति के अनुसार प्रामाणिक पूजन, जप एवं अनुष्ठान द्वारा भक्तों के जीवन में सुख, शांति एवं समृद्धि लाना है।"
-                </p>
-                <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-slate-800 text-amber-300 px-3 py-1 rounded-lg border border-amber-500/30">📜 15+ वर्ष अनुभव</span>
-                    <span class="bg-slate-800 text-amber-300 px-3 py-1 rounded-lg border border-amber-500/30">🚩 5000+ सफल अनुष्ठान</span>
-                    <span class="bg-slate-800 text-amber-300 px-3 py-1 rounded-lg border border-amber-500/30">📍 काशी (वाराणसी)</span>
-                </div>
-            </div>
-        </div>
+<section class="profile-card">
+    <div style="font-size: 80px; text-align: center;">🧘‍♂️</div>
+    <div>
+        <h3 style="color: #fcd34d; margin: 0; font-size: 24px;">ज्योतिर्विद विवेकानंद शास्त्री</h3>
+        <p style="color: #FF7700; margin: 5px 0;">मुख्य आचार्य एवं संस्थापक (काशी एवं उज्जैन परंपरा)</p>
+        <p style="color: #cbd5e1; font-size: 14px; line-height: 1.5;">"हमारा उद्देश्य सनातन वैदिक संस्कृति के अनुसार प्रामाणिक पूजन, जप एवं अनुष्ठान द्वारा भक्तों के जीवन में सुख, शांति एवं समृद्धि लाना है।"</p>
     </div>
 </section>
 
-<!-- Services Grid Section -->
-<section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
+<h2 class="section-title" id="services">प्रमुख पूजा एवं अनुष्ठान सेवाएं</h2>
+<div class="grid-container">
+    <div class="card">
+        <h3>🔱 रुद्राभिषेक एवं महामृत्युंजय</h3>
+        <p>रोग मुक्ति, अकाल मृत्यु भय निवारण एवं बाबा विश्वनाथ की कृपा प्राप्ति हेतु विशेष रुद्राभिषेक।</p>
+        <a href="#booking">संकल्प करें →</a>
+    </div>
+    <div class="card">
+        <h3>🐍 कालसर्प एवं मंगल दोष शांत</h3>
+        <p>विवाह में विलंब, व्यापार रुकावट एवं मानसिक तनाव दूर करने हेतु उज्जैन व काशी में विशेष पूजा।</p>
+        <a href="#booking">संकल्प करें →</a>
+    </div>
+    <div class="card">
+        <h3>🏠 गृह प्रवेश एवं वास्तु शांति</h3>
+        <p>नए घर में सुख-समृद्धि एवं सकारात्मक ऊर्जा के प्रवेश हेतु वास्तु पूजन एवं हवन।</p>
+        <a href="#booking">संकल्प करें →</a>
+    </div>
+</div>
+
+<div class="form-box" id="booking">
+    <h2 style="color: #FFD700; text-align: center; margin-top: 0;">पूजा / अनुष्ठान बुक करें</h2>
+    <form onsubmit="handleFormSubmit(event)">
+        <label style="color: #fcd34d; font-size: 14px;">यजमान का नाम *</label>
+        <input type="text" id="name" required placeholder="उदा. राम शर्मा">
+        
+        <label style="color: #fcd34d; font-size: 14px;">WhatsApp मोबाईल नंबर *</label>
+        <input type="tel" id="mobile" required placeholder="9651500884">
+        
+        <label style="color: #fcd34d; font-size: 14px;">पूजा/अनुष्ठान का प्रकार चुनें *</label>
+        <select id="service" required>
